@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import About from "./components/pages/About";
 import NotFound from "./components/pages/NotFound";
 
+// Renders the header and then a page depending on url
 const App = () => (
   <Router>
     <div className="App">
