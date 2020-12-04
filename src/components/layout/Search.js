@@ -1,20 +1,25 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import icon from "./search.svg";
+import { useHistory } from "react-router-dom";
 
 // Renders the search field and search button
-const Search = (props) => {
+const Search = () => {
   const [text, setText] = useState("");
+  const history = useHistory();
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    setText("");
+    // Handle empty input later
+    if (text !== "") {
+      history.push("/cities/" + text);
+      setText("");
+    }
   };
 
   const onChange = (e) => setText(e.target.value);
 
   return (
-    <div>
+    <div className="search">
       <form onSubmit={onSubmit}>
         <input
           type="text"
@@ -23,14 +28,12 @@ const Search = (props) => {
           value={text}
           onChange={onChange}
         />
-        <button type="submit">
+        <button type="submit" className="bg-grey">
           <img src={icon} alt="Search" />
         </button>
       </form>
     </div>
   );
 };
-
-Search.propTypes = {};
 
 export default Search;

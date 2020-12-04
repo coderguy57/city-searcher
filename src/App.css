@@ -9,6 +9,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 body {
@@ -22,9 +23,20 @@ body {
 a {
   text-decoration: none;
 }
-
 ul {
   list-style: none;
+}
+img {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+input:focus {
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .icon {
@@ -53,34 +65,6 @@ header {
   margin-bottom: 1rem;
   box-shadow: 0 5px 20px -10px #000;
 }
-
-form {
-  display: flex;
-}
-input {
-  padding: 0.2rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 2px 0 0 2px;
-}
-input:focus {
-  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-button {
-  padding: 0;
-  background: var(--grey-color);
-  border: none;
-  cursor: pointer;
-  border-radius: 0 2px 2px 0;
-}
-button:hover {
-  opacity: 0.8;
-}
-button img {
-  height: 1.4rem;
-  padding: 0 1rem;
-}
-
 header ul {
   display: flex;
 }
@@ -90,9 +74,31 @@ header a {
   color: #fff;
 }
 
+/* Search form */
+.search form {
+  display: flex;
+}
+.search input {
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  border-radius: 2px 0 0 2px;
+}
+.search button {
+  border-radius: 0 2px 2px 0;
+}
+.search button img {
+  height: 1.4rem;
+  width: 1.4rem;
+  margin: 0 1rem;
+}
+
+/* Backgrounds */
 .bg-primary {
   background: var(--primary-color);
   color: #fff;
+}
+.bg-grey {
+  background: var(--grey-color);
 }
 
 /* Mobile Styles */
