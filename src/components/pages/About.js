@@ -7,8 +7,10 @@ const About = () => (
       This is an application by CityPop where the user can search for
       information about cities.
     </p>
+    <h2>
+      <a href="https://github.com/coderguy57/city-searcher">Github Repo</a>
+    </h2>
   </Fragment>
 );
 
 export default About;
-
