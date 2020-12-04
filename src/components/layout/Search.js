@@ -12,7 +12,6 @@ const Search = () => {
     // Handle empty input later
     if (text !== "") {
       history.push("/cities/" + text);
-      setText("");
     }
   };
 
@@ -28,7 +27,7 @@ const Search = () => {
           value={text}
           onChange={onChange}
         />
-        <button type="submit" className="bg-grey">
+        <button type="submit" className="bg-light">
           <img src={icon} alt="Search" />
         </button>
       </form>

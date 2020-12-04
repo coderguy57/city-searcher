@@ -2,7 +2,8 @@
 
 :root {
   --primary-color: #032d99;
-  --grey-color: #ccc;
+  --light-color: #ccc;
+  --grey-color: #666;
 }
 
 * {
@@ -54,6 +55,9 @@ input:focus {
 .text-large {
   font-size: 3rem;
 }
+.grey {
+  color: var(--grey-color);
+}
 
 /* Header */
 header {
@@ -78,13 +82,13 @@ header a {
 .search form {
   display: flex;
 }
+.search * {
+  border-radius: 2px;
+  margin: 0 0.4rem;
+}
 .search input {
   padding: 0.2rem;
   font-size: 1.2rem;
-  border-radius: 2px 0 0 2px;
-}
-.search button {
-  border-radius: 0 2px 2px 0;
 }
 .search button img {
   height: 1.4rem;
@@ -99,6 +103,10 @@ header a {
 }
 .bg-grey {
   background: var(--grey-color);
+}
+.bg-light {
+  background: var(--light-color);
+  color: #000;
 }
 
 /* Mobile Styles */
