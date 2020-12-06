@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CityItem = ({ city: { name, population }, country }) => {
-  if (!country) return <h3 className="card">{name}</h3>; 
+  if (!country) return <h3 className="card">{name}</h3>;
+
   return (
     <div className="card">
       <h3>
-        {name}{", "}
+        {name}
+        {", "}
         <Link to={`/search/city=&country=${country}`} className="primary">
           {country}
         </Link>

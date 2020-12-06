@@ -20,16 +20,18 @@ const Search = () => {
   const cityChange = (e) => setCity(e.target.value);
 
   return (
-    <div className="search">
-      <form onSubmit={onSubmit}>
+    <form className="search" onSubmit={onSubmit}>
+      <input
+        size="6"
+        type="text"
+        name="country"
+        placeholder="Country"
+        value={country}
+        onChange={countryChange}
+      />
+      <div className="search-field">
         <input
-          type="text"
-          name="country"
-          placeholder="Country"
-          value={country}
-          onChange={countryChange}
-        />
-        <input
+          size="8"
           type="text"
           name="city"
           placeholder="City"
@@ -37,10 +39,10 @@ const Search = () => {
           onChange={cityChange}
         />
         <button type="submit" className="bg-light">
-          <img src={icon} alt="Search" />
+          <img src={icon} className="search-icon" alt="Search" />
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 };
 

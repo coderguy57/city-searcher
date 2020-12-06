@@ -6,8 +6,8 @@ import Search from "./Search";
 // Renders logo, searchbar and links
 const Header = () => (
   <header className="bg-primary">
-    <h1>
-      <img src={icon} className="icon" alt="logo" />
+    <h1 className="same-line">
+      <img src={icon} className="icon" alt="Logo" />
       City Search
     </h1>
     <Search />
