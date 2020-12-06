@@ -17,12 +17,19 @@ du upp ditt git-repo till valfritt ställe så att vi kan nå det, förslagsvis 
 ## Kravspecifikation
 
 ### När användaren söker på en stad ska antalet invånare hämtas dynamiskt och visas.
+När anändare sök på en stad visas en lista med städer. Det är för att det kan finnas flera städer med samma namn. 
+Både land och invånare visas brevid staden.
 
 ### När användaren söker på ett land ska de städer med flest invånare visas och sorteras utifrån invånarantal.
+Det finns två sökfält, en för länder och en för städer. Landets städer visas då i ordande efter invånarantal.
 
 ### När användaren sökt på ett land, ska de städer som dyker upp gå att klicka på varefter man får fram invånarantalet för den staden.
+Om användaren har sökt på ett land visas inte längre invånare och land brevid staden.
+Jag har valt att dela upp sökningen till två sökfält eftersom hur resultaten ska visas 
+beror på om användaren har sökt på ett land eller inte.
 
 ### Det ska tydligt visas för användaren när applikationen laddar innehåll.
-Det visas en laddningsicon när applikationen laddar innehåll
+Det visas en laddningsicon när applikationen laddar innehåll.
 
 ### Olika typer av fel som kan uppstå ska visas för användaren, t.ex. om en stad inte finns.
+Användaren informeras om landet eller staden som sökts efter inte finns. 
