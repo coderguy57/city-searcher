@@ -7,8 +7,10 @@ import Search from "./Search";
 const Header = () => (
   <header className="bg-primary">
     <h1 className="same-line">
-      <img src={icon} className="icon" alt="Logo" />
-      City Search
+      <Link to="/">
+        <img src={icon} className="icon" alt="Logo" />
+        City Search
+      </Link>
     </h1>
     <Search />
     <nav>
