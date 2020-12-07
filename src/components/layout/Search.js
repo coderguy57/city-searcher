@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import icon from "./search.svg";
 import { useHistory } from "react-router-dom";
+import { useSearchState } from "../../context/SearchProvider";
 
 // Renders the search field and search button
 const Search = () => {
@@ -8,12 +9,22 @@ const Search = () => {
   const [city, setCity] = useState("");
   const history = useHistory();
 
+  const { searchState } = useSearchState();
+  // Updates the searchfield and the url
+  //  Gets called when the searchState changed
+  //  i.e. an external search has been made
+  useEffect(() => {
+    console.log("HEJ");
+    const { city, country } = searchState;
+    setCity(city);
+    setCountry(country);
+    history.push(`/search/city=${city}&country=${country}`);
+  }, [history, searchState]);
+
+  // Updates the url
   const onSubmit = async (e) => {
     e.preventDefault();
-    // Handle empty input later
     history.push(`/search/city=${city}&country=${country}`);
-    setCountry("");
-    setCity("");
   };
 
   const countryChange = (e) => setCountry(e.target.value);
